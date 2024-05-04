@@ -79,7 +79,7 @@ public class BacteriaExperiment {
         JOptionPane.showMessageDialog(null, "Se ha agregado una población de bacterias al experimento actual.");
     }
 
-    // Clase para representar un experimento
+
     static class Experimento {
         private ArrayList<PoblacionBacterias> poblaciones = new ArrayList<>();
 
