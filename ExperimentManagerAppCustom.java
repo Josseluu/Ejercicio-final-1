@@ -69,6 +69,7 @@ class CustomExperimentManagerUI {
                 deleteBacteriaPopulation();
             }
         });
+
         frame.add(deleteBacteriaPopulationButton);
 
         JButton detailedPopulationInfoButton = new JButton("Información Detallada de Población");
