@@ -89,6 +89,7 @@ class CustomExperimentManagerUI {
                 saveExperiment();
             }
         });
+
         frame.add(saveExperimentButton);
 
         JButton saveAsExperimentButton = new JButton("Guardar como...");
