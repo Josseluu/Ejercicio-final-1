@@ -28,6 +28,7 @@ class CustomExperimentManagerUI {
             }
 
         });
+
         frame.add(newExperimentButton);
 
         JButton openExperimentButton = new JButton("Abrir Experimento");
