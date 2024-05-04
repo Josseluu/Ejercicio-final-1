@@ -71,7 +71,7 @@ public class BacteriaExperiment {
         int comidaIncremento = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la cantidad de comida para el día de incremento:"));
         int comidaFinal = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la cantidad final de comida en el día 30:"));
 
-        // Crear una nueva población de bacterias y agregarla al experimento actual
+
         PoblacionBacterias poblacion = new PoblacionBacterias(nombre, fechaInicio, fechaFin, numBacterias,
                 temperatura, luminosidad, comidaInicial, diaIncremento, comidaIncremento, comidaFinal);
         experimentoActual.agregarPoblacion(poblacion);
