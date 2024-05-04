@@ -47,6 +47,7 @@ class CustomExperimentManagerUI {
             public void actionPerformed(ActionEvent e) {
                 addBacteriaPopulation();
             }
+
         });
         frame.add(addBacteriaPopulationButton);
 
