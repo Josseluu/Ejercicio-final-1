@@ -44,7 +44,7 @@ public class BacteriaExperiment {
     }
 
     private static void crearNuevoExperimento() {
-        // Implementación para crear un nuevo experimento
+
         experimentoActual = new Experimento();
         experimentos.add(experimentoActual);
         JOptionPane.showMessageDialog(null, "Se ha creado un nuevo experimento.");
