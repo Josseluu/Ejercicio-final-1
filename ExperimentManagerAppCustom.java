@@ -38,6 +38,7 @@ class CustomExperimentManagerUI {
                 openExperiment();
             }
         });
+
         frame.add(openExperimentButton);
 
         JButton addBacteriaPopulationButton = new JButton("Agregar Población de Bacterias");
