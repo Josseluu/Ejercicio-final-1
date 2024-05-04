@@ -49,6 +49,7 @@ class CustomExperimentManagerUI {
             }
 
         });
+
         frame.add(addBacteriaPopulationButton);
 
         JButton viewBacteriaPopulationsButton = new JButton("Visualizar Poblaciones de Bacterias");
