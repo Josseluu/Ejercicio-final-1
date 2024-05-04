@@ -96,7 +96,7 @@ class CustomExperimentManagerUI {
     }
 
     private void createNewExperiment() {
-        // Implementación para crear un nuevo experimento
+
         currentExperiment = new ExperimentCustom();
         experiments.add(currentExperiment);
         JOptionPane.showMessageDialog(null, "Nuevo experimento creado con éxito.");
