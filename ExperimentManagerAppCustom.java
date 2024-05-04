@@ -79,6 +79,7 @@ class CustomExperimentManagerUI {
                 showDetailedPopulationInfo();
             }
         });
+
         frame.add(detailedPopulationInfoButton);
 
         JButton saveExperimentButton = new JButton("Guardar Experimento");
