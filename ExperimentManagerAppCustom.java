@@ -194,7 +194,7 @@ class CustomExperimentManagerUI {
     }
 
     private void saveAsExperiment() {
-        // Implementación para guardar el experimento actual como un nuevo archivo
+
         JOptionPane.showMessageDialog(null, "Funcionalidad 'Guardar como...' aún no implementada.");
     }
 }
