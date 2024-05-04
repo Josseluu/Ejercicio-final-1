@@ -185,6 +185,7 @@ class CustomExperimentManagerUI {
                     break;
                 }
             }
+
             JOptionPane.showMessageDialog(null, "Información detallada de la población de bacterias '" + selectedPopulation + "':\n" + detailedInfo.toString());
         }
     }
