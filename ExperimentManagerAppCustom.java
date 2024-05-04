@@ -189,7 +189,7 @@ class CustomExperimentManagerUI {
     }
 
     private void saveExperiment() {
-        // Implementación para guardar el experimento actual
+
         JOptionPane.showMessageDialog(null, "Funcionalidad 'Guardar Experimento' aún no implementada.");
     }
 
