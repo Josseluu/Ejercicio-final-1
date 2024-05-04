@@ -103,7 +103,7 @@ class CustomExperimentManagerUI {
     }
 
     private void openExperiment() {
-        // Implementación para abrir un experimento existente desde un archivo
+
         JOptionPane.showMessageDialog(null, "Funcionalidad 'Abrir Experimento' aún no implementada.");
     }
 
