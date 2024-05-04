@@ -122,6 +122,7 @@ class CustomExperimentManagerUI {
         }
     }
 
+
     private void viewBacteriaPopulations() {
         if (currentExperiment == null) {
             JOptionPane.showMessageDialog(null, "No hay experimento actual. Crea un nuevo experimento primero.");
