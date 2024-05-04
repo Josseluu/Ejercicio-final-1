@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.event.*;
+import java.io.*;
 import java.util.ArrayList;
 
 public class ExperimentManagerAppCustom {
@@ -26,7 +27,6 @@ class CustomExperimentManagerUI {
             public void actionPerformed(ActionEvent e) {
                 createNewExperiment();
             }
-
         });
 
         frame.add(newExperimentButton);
@@ -47,7 +47,6 @@ class CustomExperimentManagerUI {
             public void actionPerformed(ActionEvent e) {
                 addBacteriaPopulation();
             }
-
         });
 
         frame.add(addBacteriaPopulationButton);
@@ -105,19 +104,29 @@ class CustomExperimentManagerUI {
     }
 
     private void createNewExperiment() {
-
         currentExperiment = new ExperimentCustom();
         experiments.add(currentExperiment);
         JOptionPane.showMessageDialog(null, "Nuevo experimento creado con éxito.");
     }
 
     private void openExperiment() {
-
-        JOptionPane.showMessageDialog(null, "Funcionalidad 'Abrir Experimento' aún no implementada.");
+        JFileChooser fileChooser = new JFileChooser();
+        int result = fileChooser.showOpenDialog(null);
+        if (result == JFileChooser.APPROVE_OPTION) {
+            File selectedFile = fileChooser.getSelectedFile();
+            try {
+                FileInputStream fileInputStream = new FileInputStream(selectedFile);
+                ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
+                currentExperiment = (ExperimentCustom) objectInputStream.readObject();
+                objectInputStream.close();
+                JOptionPane.showMessageDialog(null, "Experimento abierto exitosamente desde: " + selectedFile.getAbsolutePath());
+            } catch (IOException | ClassNotFoundException ex) {
+                JOptionPane.showMessageDialog(null, "Error al abrir el experimento: " + ex.getMessage());
+            }
+        }
     }
 
     private void addBacteriaPopulation() {
-
         if (currentExperiment == null) {
             JOptionPane.showMessageDialog(null, "No hay experimento actual. Crea un nuevo experimento primero.");
             return;
@@ -142,7 +151,6 @@ class CustomExperimentManagerUI {
             JOptionPane.showMessageDialog(null, "El nombre de la población de bacterias no puede estar vacío.");
         }
     }
-
 
     private void viewBacteriaPopulations() {
         if (currentExperiment == null) {
@@ -218,13 +226,47 @@ class CustomExperimentManagerUI {
     }
 
     private void saveExperiment() {
+        if (currentExperiment == null) {
+            JOptionPane.showMessageDialog(null, "No hay experimento para guardar.");
+            return;
+        }
 
-        JOptionPane.showMessageDialog(null, "Funcionalidad 'Guardar Experimento' aún no implementada.");
+        JFileChooser fileChooser = new JFileChooser();
+        int result = fileChooser.showSaveDialog(null);
+        if (result == JFileChooser.APPROVE_OPTION) {
+            File selectedFile = fileChooser.getSelectedFile();
+            try {
+                FileOutputStream fileOutputStream = new FileOutputStream(selectedFile);
+                ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
+                objectOutputStream.writeObject(currentExperiment);
+                objectOutputStream.close();
+                JOptionPane.showMessageDialog(null, "Experimento guardado exitosamente en: " + selectedFile.getAbsolutePath());
+            } catch (IOException ex) {
+                JOptionPane.showMessageDialog(null, "Error al guardar el experimento: " + ex.getMessage());
+            }
+        }
     }
 
     private void saveAsExperiment() {
+        if (currentExperiment == null) {
+            JOptionPane.showMessageDialog(null, "No hay experimento para guardar.");
+            return;
+        }
 
-        JOptionPane.showMessageDialog(null, "Funcionalidad 'Guardar como...' aún no implementada.");
+        JFileChooser fileChooser = new JFileChooser();
+        int result = fileChooser.showSaveDialog(null);
+        if (result == JFileChooser.APPROVE_OPTION) {
+            File selectedFile = fileChooser.getSelectedFile();
+            try {
+                FileOutputStream fileOutputStream = new FileOutputStream(selectedFile);
+                ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
+                objectOutputStream.writeObject(currentExperiment);
+                objectOutputStream.close();
+                JOptionPane.showMessageDialog(null, "Experimento guardado exitosamente en: " + selectedFile.getAbsolutePath());
+            } catch (IOException ex) {
+                JOptionPane.showMessageDialog(null, "Error al guardar el experimento: " + ex.getMessage());
+            }
+        }
     }
 }
 
