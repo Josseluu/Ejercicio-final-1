@@ -51,7 +51,7 @@ public class BacteriaExperiment {
     }
 
     private static void abrirExperimento() {
-        // Implementación para abrir un experimento existente desde un archivo
+
     }
 
     private static void agregarPoblacionBacterias() {
