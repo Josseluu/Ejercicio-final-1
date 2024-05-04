@@ -26,6 +26,7 @@ class CustomExperimentManagerUI {
             public void actionPerformed(ActionEvent e) {
                 createNewExperiment();
             }
+
         });
         frame.add(newExperimentButton);
 
