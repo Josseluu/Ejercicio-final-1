@@ -180,7 +180,7 @@ class CustomExperimentManagerUI {
             for (BacteriaPopulationCustom population : currentExperiment.getPopulations()) {
                 if (population.getName().equals(selectedPopulation)) {
                     detailedInfo.append("Nombre: ").append(population.getName()).append("\n");
-                    // Aquí puedes agregar más detalles sobre la población de bacterias si es necesario
+
                     break;
                 }
             }
