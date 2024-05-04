@@ -59,6 +59,7 @@ class CustomExperimentManagerUI {
                 viewBacteriaPopulations();
             }
         });
+
         frame.add(viewBacteriaPopulationsButton);
 
         JButton deleteBacteriaPopulationButton = new JButton("Borrar Población de Bacterias");
