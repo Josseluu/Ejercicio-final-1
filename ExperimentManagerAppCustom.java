@@ -108,7 +108,7 @@ class CustomExperimentManagerUI {
     }
 
     private void addBacteriaPopulation() {
-        // Implementación para agregar una población de bacterias al experimento actual
+
         if (currentExperiment == null) {
             JOptionPane.showMessageDialog(null, "No hay experimento actual. Crea un nuevo experimento primero.");
             return;
